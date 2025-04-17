@@ -18,7 +18,7 @@ export class User extends Document {
     firstName: string;
 
     @Prop({ required: true })
-    lastName: string;    
+    lastName: string;
 
     @Prop({ required: true })
     city: string;
@@ -26,8 +26,18 @@ export class User extends Document {
     @Prop({ required: true })
     country: string;
 
-    @Prop({ required: true })    
+    @Prop({ required: true })
     phonenumber: string;
+
+
+    @Prop()
+    emailVerificationCode?: string;
+
+    @Prop()
+    emailVerified?: boolean;
+
+    @Prop()
+    emailVerificationCodeExpires?: Date;
 
 
 
